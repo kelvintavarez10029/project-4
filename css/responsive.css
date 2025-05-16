@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+[aria-controls="navbarDropdown"]{
+  display: block;
+}
+[aria-expanded="false"] ~ ul{
+  display:none;
+}
+[aria-expanded="true"] ~ ul{
+  display:block;
+  position: absolute;
+  right: 0;
+  top: var(--size-50);
+  background-image: linear-gradient(to right, transparent, rgba(255,255,255,0.13));
+  width: 100%;
+  text-align: right;
+  box-shadow: 0px 0px 20px rgba(52,49,79, 0.1);
+}
+[aria-expanded="true"] ~ ul li a{
+  margin-right: var(--size-20);
+  color: var(--font-color-dark);
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Change to 2 columns for tablet */
+}
+
+.footer-col:nth-child(3) {
+  grid-column: 1 / -1; /* This will make it span across all columns (center it below) */
+  justify-self: center; /* Center the content */
+}
+}
